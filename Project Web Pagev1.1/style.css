@@ -1,0 +1,236 @@
+*{
+	margin:0;
+	padding:0;
+}
+ body{
+ 	font-family:'Dancing Script', cursive;
+ 	font-size:100%;
+ 	margin:9em;
+ 	background:url(./images/wood.jpg);
+ 	background-repeat:no-repeat;
+ 	background-size:cover;
+
+ 	/*color:#fff;*/
+ }
+ #wallpaper {
+ 	background:url(./images/wallpaper.jpg);
+ 	background-repeat: no-repeat;
+ 	background-size:auto;
+ 	position:relative;
+
+ }
+
+ .header {
+ 	/*margin: 1em 0 0.5em 0;*/
+ 	background-image: linear-gradient(to right, violet, indigo, blue, green, yellow, orange, red);
+ 	-webkit-background-clip: text;
+ 	color:transparent;
+ 	font-weight: normal;
+ 	font-family: 'Merienda', cursive;
+ 	font-size: 75px;
+ 	line-height: 100px;
+ 	display:block;
+ 	text-align: center;
+ 	/*text-shadow: 2px .4px 4px #000000;*/
+ 	
+ }
+ /*text effect by ThatGuySam*/
+ .header2 {
+ 	color: #fff;
+  font-size: 5em;
+  font-weight: bold;
+  font-family: Helvetica;
+  text-shadow: 
+    0 1px 0 #ccc, 
+    0 2px 0 #c9c9c9, 
+    0 3px 0 #bbb, 
+    0 4px 0 #b9b9b9, 
+    0 5px 0 #aaa, 
+    0 6px 1px rgba(0,0,0,.1), 
+    0 0 5px rgba(0,0,0,.1), 
+    0 1px 3px rgba(0,0,0,.3), 
+    0 3px 5px rgba(0,0,0,.2), 
+    0 5px 10px rgba(0,0,0,.25), 
+    0 10px 10px rgba(0,0,0,.2), 
+    0 20px 20px rgba(0,0,0,.15);
+    text-align:center;
+
+ }
+ ul li p {
+ 	/*font-family:'Dancing Script', cursive;*/
+ 	font-family: 'Architects Daughter', cursive;
+ 	font-size:100%;
+ }
+/* code inspiration Chris Heilman on code.tutdplud.com*/
+h1{
+	font-size:150%;
+	font-weight:normal;
+	/*font-family: 'Architects Daughter', cursive;*/
+	font-family:'Dancing Script', cursive;
+}
+ h2, p{
+ 	font-size:100%;
+ 	font-weight:normal;
+ }
+ ul, li{
+ 	list-style:none;
+ }
+ ul {
+ 	overflow:hidden;
+ 	padding:3em;
+ }
+ ul, li h2{
+ 	font-size:140%;
+ 	font-weight:bold;
+ 	padding-bottom:10px;
+ }
+ ul{
+ 	overflow:hidden;
+ 	padding:3em;
+ }
+ ul li a{
+ 	text-decoration:none;
+ 	color:#000;
+ 	background:#ffc;
+ 	display:block;
+ 	height:10em;
+ 	width:10em;
+ 	padding:1em;
+ 	/* shadow effect*/
+ 	/* Firefox*/
+ 	-moz-box-shadow:5px 5px 7px rgba(33, 33, 33, 1);
+ 	/*safari and Chrome*/
+ 	-webkit-box-shadow: 5px 5px 7px rgba(33, 33, 33, 7);
+ 	/*Opera*/
+ 	box-shadow: 5px 5px 7px(33, 33, 33, 7);
+ }
+ 	/*notes tilting effect by Zurb*/
+ 	ul li a{
+ 		-webkit-transform:rotate(-6deg);
+ 		-o-transform:rotate(-6deg);
+ 		-moz-transform:rotate(-6deg);
+ 	}
+
+ 	ul li:nth-child(even) a{
+ 	-webkit-transform:rotate(4deg);
+ 	-o-transform:rotate(4deg);
+ 	-moz-transform:rotate(4deg);
+ 	position:relative;
+ 	top:-5px;
+ 	background:#ffffcc;
+ }
+
+ul li:nth-child(3n) a{
+	-o-transform:rotate(-3deg);
+	-webkit-transform:rotate(-3deg);
+	-moz-transform:rotate(-3deg);
+	position:relative;
+	top:-5px;
+	background:#ccffff;
+}
+ul li:nth-child(5n) a{
+	-o-transform:rotate(5deg);
+	-webkit-transform:rotate(5deg);
+	-moz-transform:rotate(5deg);
+	position:relative;
+	top:10px;
+}
+ ul li a{
+ 	margin:1em;
+ 	float:left;
+ }
+ /*zoom, hover and focus on the notes*/
+ ul li a:hover, ul li a:focus {
+ 	-moz-box-shadow:10px 10px 7px rgba(0, 0, 0, 7);
+ 	-webkit-box-shadow: 10px 10px 7px rgba(0, 0, 0, 7);
+ 	box-shadow: 10px 10px 7px rgba(0, 0, 0, 7);
+ 	-webkit-transform: scale(1.25);
+ 	-moz-transform: scale (1.25);
+ 	-o-transform: scale(1.25);
+ 	position:relative;
+ 	z-index:5;
+ }
+/*smooth transition*/
+ ul li a{
+ 	text-decoration:none;
+ 	color:#000;
+ 	background:#ffcccc;
+ 	display:block;
+ 	height:10em;
+ 	width:10em;
+ 	padding:1em;
+ 	-moz-box-shadow:5px 5px 7px rgba(33, 33, 33, 1);
+ 	-webkit-box-shadow:5px 5px 7px rgba(33, 33, 33, 7);
+ 	box-shadow: 5px 5px 7px rgba(33, 33, 33, 7);
+ 	-moz-transition:-moz-transform .15s linear;
+ 	-o-transition:-o-transform .15s linear;
+ 	-webkit-transition:-webkit-transform .15s linear;
+ }
+ /*Note1 style curtesy of Rob Sobers*/
+ 
+ 
+#notes li{
+	position:relative;
+	width: 500px;
+	min-height: 500px;
+	margin: 25px auto;
+	padding: 60px 15px 15px 15px;
+	background: #fff; /*url(https://hookedonbookzblog.files.wordpress.com/2009/11/0dcc9-andrewmattews01.jpg) no-repeat 4px 8px;*/
+	-webkit-box-shadow: 0 2px 12px rgba(0, 0, 0, .5);
+	-moz-box-shadow: 0 2px 12px rgba(0, 0, 0, .5);
+	box-shadow:0 1px 2px #000;
+	-webkit-transform: rotate(-.8deg);
+	-moz-transform: rotate(-.8deg);
+	-o-transform: rotate(-.8deg);
+}
+#notes li:nth-child(even) {
+	-webkit-transform: rotate(.10deg);
+	-moz-transform: rotate(.10deg);
+	-o-transform: rotate(.10deg);
+
+}
+/*#notes li.stiker{
+	/*background-image: url(https://andrewmatthews.com/wp-content/uploads/2017/02/How-Life-Works-cartoon-4-300x258.jpg);*/
+
+
+#notes li p {
+	text-align:center;
+	font: normal normal normal 40px/48px 'Source Sans Pro', sans-serif;
+	color:#000;
+	text-shadow: white 1px 1px 0px;
+	overflow: hidden;
+}
+/*tape effect on notes*/
+#notes li:before {
+	content:' ';
+	display:block;
+	position:relative;
+	left: 115px;
+	top: -75px;
+	width: 75px;
+	height: 25px;
+	z-index: 2;
+	background-color: rgba(243, 245, 228, 0.5);
+	border: 2px solid rgba(255, 255, 255, 0.5);
+	-webkit-box-shadow: 0 0 5px #888;
+	-moz-box-shadow:0 0 5px #888;
+	box-shadow: 2px 2px 2px #000;
+	-webkit-transform: rotate(-6deg);
+	-moz-transform: rotate(-6deg);
+	-o-transform: rotate(-6deg);
+}
+
+#notes li:nth-child(even)::before {
+	-webkit-transform: rotate(6deg);
+	-moz-transform: rotate(6deg);
+	-o-transform: rotate(6deg);
+}
+ .footer{
+ 	position: fixed;
+   left: 30;
+   bottom: 30;
+   width: 100%;
+   background-color: white;
+   color: black;
+   text-align: center;
+ }

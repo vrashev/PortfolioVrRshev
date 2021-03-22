@@ -1,0 +1,27 @@
+int size=0;
+
+
+void setup(){
+  size (480,480);
+  background(255,255,255);
+  noStroke();
+}
+void draw(){
+  fill(size);
+ 
+  if(mousePressed==true){
+    fill(0,26,51);// when the mouse is pressed the brush is blue colored
+   //else 
+    //fill(255,0,0);// if mouse isn't pressed, the brush color is red
+  
+  
+  arc(mouseX, mouseY, 80,80,0, HALF_PI);//the shape of the brush is a piece of an ellipse
+  if(frameCount > 200) { //quit after 100 frames
+    exit();
+  }
+  
+  saveFrame("frames/myMovie-###.png"); //save in subfolder "frames"+
+  // file name "myMovie-"+  three digits "###"+  in PNG format
+  // result: frames/myMovie-000.png , frames/myMovie-001.png , etc,etc
+}
+  }

@@ -1,0 +1,133 @@
+Ball[] balls = new Ball[50];
+PacMan[] pacmans = new PacMan[20];
+
+
+
+void setup() {
+  size (800, 800);
+  for (int i = 0; i < balls.length; i++) {
+    balls[i] = new Ball();
+  }
+  for (int b = 0; b < pacmans.length; b++) {
+    pacmans[b] = new PacMan();
+  }
+}
+void draw() {
+  background(random(255), random(255), random(255));
+  for (int i = 0; i < balls.length; i++) {
+
+    balls[i].display();
+    balls[i].move();
+    for (int b = 0; b <pacmans.length; b++) {
+      pacmans[b].display();
+      pacmans[b].move();
+    }
+  }
+
+
+if (frameCount <500){
+  saveFrame("frames/line####.png");
+  println(frameCount);
+} else{
+  exit();
+}
+}
+class Ball {
+  float x;
+  float y;
+  float size;
+  float speedX;
+  float speedY;
+  float flipcoinX;
+  float flipcoinY;
+  float r;
+  float g;
+  float b;
+  Ball() {
+    r = random(255);
+    b = random(255);
+    g = random(255);
+    x = random(width);
+    y = random(height);
+    size = 25;
+    speedX = random(1,4);
+    speedY= random(1,4);
+    flipcoinX = random (0,5);
+    flipcoinY = random (0,5);
+    if(flipcoinX> 0.5){
+      speedX = speedX*-1;
+    }
+    if(flipcoinY> 0.5){
+      speedY = speedY*-1;
+    }
+  }
+  
+  void move() {
+    x = x + speedX;
+    if ((x > width) || (x < 0)) {
+      speedX = speedX *-1;
+    }
+     y = y + speedY;
+    if ((y > height) || (y> 0)) {
+      speedY = speedY *-1;
+    }
+  }
+
+  void display() {
+    noStroke();
+    fill(r,g,b);
+    ellipse(x, y, size, size);
+  }
+}
+class PacMan {
+  int radius = 40;
+  float x = -radius;
+  float y;
+  //float size;
+  float speedX;
+  float speedY;
+  float flipcoinX;
+  float flipcoinY;
+
+  PacMan() {
+
+    x = random(width);
+    y = random(height);
+    //size = 30;
+    speedX = random(0, 1);
+    speedY= random(0, 1);
+    flipcoinX = random (0, 1);
+    flipcoinY = random (0, 1);
+    if (flipcoinX> 0.5) {
+      speedX = speedX*-1;
+    }
+    if (flipcoinY> 0.5) {
+      speedY = speedY*-1;
+    }
+  }
+
+  void move() {
+    x += speedX;
+    if(x> width+radius){
+      x= -radius;
+    }
+    if (y > height +radius){
+      y=-radius;
+    }
+   // x = x + speedX;
+    //if ((x > width) || (x < 0)) {
+   //   speedX = speedX *-1;
+   // }
+   // y = y + speedY;
+   //// if ((y > height) || (y< 0)) {
+   //   speedY = speedY *-1;
+   // }
+  }
+
+  void display() {
+    noStroke();
+    fill(255, 204,0);
+    arc(x, y, 40, 40, 0.52, 5.76);
+   
+  }
+}

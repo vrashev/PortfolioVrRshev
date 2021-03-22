@@ -1,0 +1,43 @@
+int numballs = 40;
+float [] x = new float [numballs];
+float [] y = new float [numballs];
+float [] speedX = new float [numballs];
+float [] speedY = new float [numballs];
+int limite;
+float[] diameter= new float [numballs];
+
+void setup() {
+  size (600, 600);
+  fill (255, 150, 0);
+  noStroke();
+  for (int i = 0; i < numballs; i++) {
+    x[i] = random(width);
+    y[i] = random (height);
+    speedX[i] = random (-5, 5);
+    speedY[i] =  random (-5, 5);
+    diameter [i]=random(5, 20);
+   
+  }
+}
+void draw () {
+  background(0);
+  for (int i=0; i< numballs; i++) {
+    x[i] += speedX[i];
+    if (x[i]< 0 || x[i] > width) {
+      speedX[i] *= -1;
+    }
+    y[i] += speedY[i];
+    if (y[i] <0 ||y[i] > height) {
+      speedY[i] *= -1;
+   }
+    
+    limite += 10;
+    if (limite > width){
+      limite = 10;
+    }
+    saveFrame();
+    fill(random(255), random(255), random(255));
+    ellipse (x[i], y[i], diameter[i], diameter[i]);
+    //saveFrame();
+  }
+}

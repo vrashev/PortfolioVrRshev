@@ -1,0 +1,94 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <script language="javascript" type="text/javascript" src="../lib/p5.min.js"></script>
+  <!-- uncomment lines below to include extra p5 libraries -->
+	<!--script language="javascript" src="../lib/p5.dom.min.js"></script>-->
+  <!--script language="javascript" src="../lib/p5.sound.min.js"></script>-->
+  <!--script language="javascript" type="text/javascript" src="sketch.js"></script>
+<!--script language="javascript" type="text/javascript" src="sketch1.js"></script>*/
+  <!-- this line removes any default padding and style. you might only need one of these values set. -->
+  <style>
+  *{
+    box-sizing: border-box;
+  }
+   body {
+    padding: 20px;
+  	background-color:LightGray;
+    font-family: Verdana;
+  }
+  /*center webbpage*/
+  .main[
+  max-width: 1000px;
+  marin:auto;
+}
+
+   h1 {
+     color:black;
+	   font-size: 50px;
+     word-break: break-all;
+   }
+   .row{
+     margin:8px -16px;
+
+   }
+/*padding between columns*/
+.row,
+.row> .column{
+  padding: 8px;
+}
+/* create columns*/
+.column{
+  float: left;
+  width 25%;
+}
+/* content*/
+.content{
+  background-color: white;
+  padding 10px;
+}
+/*responsive layout - makes a two columns layout instead of four columns*/
+@media screen and (max-width: 900px){
+  .column{
+    width: 50%;
+  }
+}
+/* responsive layout - makes two column stacks on top of each other instead of nextto each other*/
+@media screen and (max-width: 600px){
+  .column{
+    width: 100%;
+  }
+}
+   p { color:#fa0;}
+
+  </style>
+
+</head>
+
+<body>
+<!--main page-->
+<nav class="navbar">
+      <div class="container nav_pad">
+        <ul>
+         <li><a class="navbar-link" href="../index.html">Main</a></li>
+         <li><a class="navbar-link" href="../p1.html"> Project 1</a></li>
+         <li><a class="navbar-link" href="../p2.html"> Project 2</a></li>
+         <li><a class="navbar-link" href="index1.html"> Project 3</a></li>
+         <li><a class="navbar-link" href="index3.html"> Project 4</a></li>
+        </ul>
+      </div>
+</nav>
+<h1> Vanya Rashev P5 Projects</h1>
+<hr>
+<h2>Exercise 5</h2>
+<p>This is my Processing file translated into P5</p>
+<!- - gallery grid -- >
+<div class="row">
+<div class="column">
+<div class="content">
+<script language="javascript" type="text/javascript" src="sketch.js"></script>
+
+
+</div>
+</body>
+</html>

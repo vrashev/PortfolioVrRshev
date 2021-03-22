@@ -1,0 +1,42 @@
+fill(value);
+  rect(200, 200, 50, 50);
+
+  for ( int value = 0; value < width; value += 52 ) {
+    fill(mouseX, mouseY, 100, 100);
+    rect(value, height/2, 20, height);
+    image(b, mouseX, mouseY);
+    textFont(f, 30);
+    textAlign(CENTER);
+    fill(0, 0, 0);
+    text("Mirror, Mirror on the wall...", 10, 100);
+    if(frameCount > 99) { //quit after 100 frames
+    exit();
+  }
+  
+  saveFrame("frames/myMovie-###.png"); //save in subfolder "frames"+
+  // file name "myMovie-"+  three digits "###"+  in PNG format
+  // result: frames/myMovie-000.png , frames/myMovie-001.png , etc,etc
+  }
+} 
+
+
+
+void mouseMoved() {
+  value = value + 5;
+  if (value > 255) {
+    value = 0;
+  }
+}
+
+
+void keyPressed() { 
+
+  if ( key == 'b' || key == 'B' ) { 
+    // example of toggle logic 
+    if (value == 0) { 
+      value = 255;
+    } else { 
+      value = 0;
+    }
+  }
+}

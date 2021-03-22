@@ -1,0 +1,82 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <script language="javascript" type="text/javascript" src="../lib/p5.min.js"></script>
+  <!-- uncomment lines below to include extra p5 libraries -->
+	<!--script language="javascript" src="../lib/p5.dom.min.js"></script>-->
+  <!--script language="javascript" src="../lib/p5.sound.min.js"></script>-->
+  <!--script language="javascript" type="text/javascript" src="sketch.js"></script>
+<!--script language="javascript" type="text/javascript" src="sketch1.js"></script>*/
+  <!-- this line removes any default padding and style. you might only need one of these values set. -->
+  <style>
+  *{
+    box-sizing: border-box;
+  }
+   body {
+    padding: 20px;
+  	background-color:LightGray;
+    font-family: Verdana;
+  }
+  /*center webbpage*/
+  .main[
+  max-width: 1000px;
+  marin:auto;
+}
+
+   h1 {
+     color:black;
+	   font-size: 50px;
+     word-break: break-all;
+   }
+   .row{
+     margin:8px -16px;
+
+   }
+/*padding between columns*/
+.row,
+.row> .column{
+  padding: 8px;
+}
+/* create columns*/
+.column{
+  float: left;
+  width 25%;
+}
+/* content*/
+.content{
+  background-color: white;
+  padding 10px;
+}
+/*responsive layout - makes a two columns layout instead of four columns*/
+@media screen and (max-width: 900px){
+  .column{
+    width: 50%;
+  }
+}
+/* responsive layout - makes two column stacks on top of each other instead of nextto each other*/
+@media screen and (max-width: 600px){
+  .column{
+    width: 100%;
+  }
+}
+   p { color:#fa0;}
+
+  </style>
+
+</head>
+
+<body>
+<!--main page-->
+<h1> Vanya Rashev P5 Projects</h1>
+<hr>
+
+<!- - gallery grid -- >
+
+<div class="column">
+<div class="content">
+<script language="javascript" type="text/javascript" src="sketch1.js"></script>
+<h3>The Fancy Clock</h3>
+<p>This is my clock</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+int t=0;
+int counter = 0;
+int dir =80;// dir direction , counting up or counting down in this case.
+
+
+
+void setup() {
+  size(1500, 400);
+  background(0);
+  Float a=0.0;
+  float inc=TWO_PI/120.0;
+  println("The inc = " + inc);
+  //stroke(255, 0, 0);
+}
+
+void draw() {
+  fill( random(255), random(255), random(255), random(255));
+
+
+  counter+=dir;//add 1 to the value of counter 0, so it is gonna be 1 after the first time it runs.
+  t+=1;
+  ellipse (t, 100+counter, 5, 5);
+  if (counter > 150 || counter < -20) {
+    //counter=0;
+    dir=-dir;
+    println("RESET!!! TO 0 -----");
+   counter+=dir;//add 1 to the value of counter 0, so it is gonna be 1 after the first time it runs.
+  t+=1;
+ rect(t, 100+counter, 5, 5);
+  if (counter > 150 || counter < -5) {
+    //counter=0;
+    dir=+dir;
+    println("RESET!!! TO 0 -----");
+  }
+}
+}
